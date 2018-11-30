@@ -4,6 +4,7 @@ import pprint
 
 scope = ['https://spreadsheets.google.com/feeds']
 creds = ServiceAccountCredentials.from_json_keyfile_name('client_config.json',scope)
+# Load your config file
 client = gspread.authorize(creds)
 
 sheet = client.open('data').sheet1
